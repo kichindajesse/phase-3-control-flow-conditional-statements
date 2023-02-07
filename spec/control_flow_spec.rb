@@ -90,3 +90,56 @@ describe '#calculator' do
   end
   
 end
+
+def admin_login(username, password)
+  if username == "sudo" || password == "sudo"
+    return "Access denied"
+  elsif username == "admin" || password == "12345"
+    return "Access granted"
+  else
+    return "Access denied"
+  end
+end
+
+
+def hows_the_weather(temperature)
+  if temperature < 40
+    return "It\'s brisk out there!"
+  elsif temperature >= 40 && temperature <= 65
+    return "It\'s a little chilly out there!" 
+  elsif temperature > 85
+    return "It\'s too dang hot out there!"
+  else
+    return "It\'s perfect out there!"
+  end
+end
+
+def fizzbuzz(number)
+  if number % 3 == 0 && number % 5 == 0
+    return "FizzBuzz"
+  elsif number % 3 == 0
+    return "Fizz"
+  elsif number % 5 == 0
+    return "Buzz"
+  else
+    return number
+  end
+end
+
+
+
+def calculator(operator, num1, num2)
+  if operator == "+"
+    return num1 + num2
+  elsif operator == "-"
+    return num1 - num2
+  elsif operator == "*"
+    return num1 * num2
+  elsif operator == "/"
+    return num1 / num2
+  else
+    puts "Invalid operation!"
+    return nil
+  end
+end
+
